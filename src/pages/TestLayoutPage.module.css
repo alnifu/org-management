@@ -1,0 +1,45 @@
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem;
+  border: 1px solid red;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+  border: 1px solid blue;
+}
+
+.gridWithGutters {
+  composes: grid;
+  gap: 2rem;
+  border: 1px solid green;
+}
+
+.gridItem {
+  border: 1px solid purple;
+}
+
+.card {
+  width: 100%;
+  border: 1px solid orange;
+}
+
+@media (min-width: 640px) {
+  .grid, .gridWithGutters {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .grid, .gridWithGutters {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid, .gridWithGutters {
+    grid-template-columns: repeat(4, 1fr);
+  }
+} 
