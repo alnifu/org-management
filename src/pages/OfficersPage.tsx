@@ -102,10 +102,7 @@ export function OfficersPage() {
     try {
       let query = supabase
         .from('officers')
-        .select(`
-          *,
-          organizations:organization_id (name)
-        `, { count: 'exact' });
+        .select('*');
       
       // Apply filters
       if (searchQuery) {

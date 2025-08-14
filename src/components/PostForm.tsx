@@ -204,7 +204,7 @@ export function PostForm({
               Cancel
             </Button>
             <Button type="submit" loading={isSubmitting}>
-              {initialValues.title ? 'Update' : 'Create'} Post
+              Create Post
             </Button>
           </Group>
         </Stack>
